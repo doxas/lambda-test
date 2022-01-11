@@ -8,8 +8,8 @@
     "local": "serverless invoke local --function hello",
     "setup": "serverless config credentials --provider aws --key XXXXX --secret XXXXX --profile lambdatest",
     "configure": "aws configure --profile lambdatest",
-    "first": "serverless deploy --verbose --aws-profile lambdatest",
-    "deploy": "serverless deploy function --function hello --verbose --aws-profile lambdatest",
+    "deploy": "serverless deploy --verbose --aws-profile lambdatest",
+    "deployfunction": "serverless deploy function --function hello --verbose --aws-profile lambdatest",
     "test": "serverless invoke --function hello --aws-profile lambdatest"
   },
   "repository": {
