@@ -1,0 +1,26 @@
+{
+  "name": "lambda-test",
+  "version": "0.0.1",
+  "description": "my first lambda-function on aws.",
+  "main": "index.js",
+  "scripts": {
+    "version": "serverless --version",
+    "local": "serverless invoke local --function hello",
+    "setup": "serverless config credentials --provider aws --key XXXXX --secret XXXXX --profile lambdatest",
+    "configure": "aws configure --profile lambdatest",
+    "first": "serverless deploy --verbose --aws-profile lambdatest",
+    "deploy": "serverless deploy function --function hello --verbose --aws-profile lambdatest",
+    "test": "serverless invoke --function hello --aws-profile lambdatest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doxas/lambda-test.git"
+  },
+  "author": "doxas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/doxas/lambda-test/issues"
+  },
+  "homepage": "https://github.com/doxas/lambda-test#readme",
+  "devDependencies": {}
+}
