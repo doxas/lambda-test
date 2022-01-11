@@ -1,5 +1,7 @@
 'use strict';
 
+module.exports.time = require('./src/time.js');
+
 module.exports.hello = async (event) => {
   return {
     statusCode: 200,

@@ -62,12 +62,15 @@ provider:
 functions:
   hello:
     handler: handler.hello
-#    The following are a few example events you can configure
-#    NOTE: Please make sure to change your handler code to work with those events
-#    Check the event documentation for details
     events:
       - httpApi:
-          path: /sample/test
+          path: /sample/hello
+          method: get
+  time:
+    handler: handler.time
+    events:
+      - httpApi:
+          path: /sample/time
           method: get
 #      - websocket: $connect
 #      - s3: ${env:BUCKET}
