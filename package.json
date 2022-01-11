@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "version": "serverless --version",
+    "create": "serverless create --template aws-nodejs",
     "local": "serverless invoke local --function hello",
     "setup": "serverless config credentials --provider aws --key XXXXX --secret XXXXX --profile lambdatest",
     "configure": "aws configure --profile lambdatest",
