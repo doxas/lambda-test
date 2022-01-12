@@ -6,12 +6,12 @@
   "scripts": {
     "version": "serverless --version",
     "create": "serverless create --template aws-nodejs",
-    "local": "serverless invoke local --function hello",
+    "local": "serverless invoke local --function postal --path src/data.json",
     "setup": "serverless config credentials --provider aws --key XXXXX --secret XXXXX --profile lambdatest",
     "configure": "aws configure --profile lambdatest",
     "deploy": "serverless deploy --verbose --aws-profile lambdatest",
-    "deployfunction": "serverless deploy function --function hello --verbose --aws-profile lambdatest",
-    "test": "serverless invoke --function hello --aws-profile lambdatest"
+    "deployfunction": "serverless deploy function --function postal --verbose --aws-profile lambdatest",
+    "test": "serverless invoke --function postal --aws-profile lambdatest"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,9 @@
     "url": "https://github.com/doxas/lambda-test/issues"
   },
   "homepage": "https://github.com/doxas/lambda-test#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "axios": "^0.24.0",
+    "serverless-webpack": "^5.6.0",
+    "webpack": "^5.66.0"
+  }
 }
