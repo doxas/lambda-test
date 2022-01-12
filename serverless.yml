@@ -60,18 +60,12 @@ provider:
 #    - include-me-dir/**
 
 functions:
-  hello:
-    handler: handler.hello
+  postal:
+    handler: handler.postal
     events:
       - httpApi:
-          path: /sample/hello
-          method: get
-  time:
-    handler: handler.time
-    events:
-      - httpApi:
-          path: /sample/time
-          method: get
+          path: /postal
+          method: post
 #      - websocket: $connect
 #      - s3: ${env:BUCKET}
 #      - schedule: rate(10 minutes)
@@ -116,3 +110,5 @@ functions:
 #     NewOutput:
 #       Description: "Description for the output"
 #       Value: "Some output value"
+plugins:
+  - serverless-webpack
