@@ -11,6 +11,8 @@
     "configure": "aws configure --profile lambdatest",
     "deploy": "serverless deploy --verbose --aws-profile lambdatest",
     "deployfunction": "serverless deploy function --function postal --verbose --aws-profile lambdatest",
+    "deployprod": "serverless deploy --verbose --aws-profile lambdatest --stage prod",
+    "deployprodfunction": "serverless deploy function --function postal --verbose --aws-profile lambdatest --stage prod",
     "test": "serverless invoke --function postal --aws-profile lambdatest"
   },
   "repository": {
