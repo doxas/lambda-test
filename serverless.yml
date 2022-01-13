@@ -69,6 +69,12 @@ functions:
       - httpApi:
           path: /postal
           method: post
+  weather:
+    handler: handler.weather
+    events:
+      - httpApi:
+          path: /weather
+          method: get
 #      - websocket: $connect
 #      - s3: ${env:BUCKET}
 #      - schedule: rate(10 minutes)
