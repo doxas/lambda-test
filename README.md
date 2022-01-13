@@ -32,8 +32,8 @@ $ serverless config credentials --provider aws --key アクセスキー --secret
 
 ## yml
 
-* stage を dev に
-  - この dev というのは、serverless が自動でステージング的に分けてくれるもので、AWS の機能ではない
+* stage を `${opt:stage, self:custom.defaultStage}` とし……
+* custom > defaultStage で `dev` を指定することで、既定のステージを `dev` とする
 * region を AWS 上と揃える
 * events > httpApi > path | method をコメント解除し、指定する
   - path はスラッシュから始まるパスにする
